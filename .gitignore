@@ -1,0 +1,23 @@
+# Virtual environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Model / embedding store
+kb_store.pkl
+
+# Streamlit / cache stuff
+.streamlit/
+.pytest_cache/
+.mypy_cache/

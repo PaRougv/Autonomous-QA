@@ -1,0 +1,26 @@
+{
+  "POST /apply_coupon": {
+    "body": {
+      "code": "string"
+    },
+    "description": "Applies a discount code to the current cart and returns updated totals."
+  },
+  "POST /submit_order": {
+    "body": {
+      "name": "string",
+      "email": "string",
+      "address": "string",
+      "shipping_method": "string",
+      "payment_method": "string",
+      "items": [
+        {
+          "product_name": "string",
+          "unit_price": "number",
+          "quantity": "number"
+        }
+      ],
+      "discount_code": "string"
+    },
+    "description": "Submits the final order and returns a confirmation status."
+  }
+}

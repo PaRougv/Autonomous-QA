@@ -1,0 +1,24 @@
+UI/UX Guidelines for E-Shop Checkout
+
+1. Form Validation
+   - Validation errors must be displayed as inline messages directly under the corresponding input field.
+   - Validation error text must be red.
+   - Required fields must be clearly marked with an asterisk (*) in their label.
+
+2. Discount Code Input
+   - The discount error message must be displayed in red text near the discount field.
+   - Invalid discount codes should not affect the total price.
+
+3. Pay Now Button
+   - The "Pay Now" button must be green.
+   - The button text color must be white.
+   - The button must be disabled or show an error if the form is invalid.
+
+4. Success Message
+   - On successful payment, show a success message: "Payment Successful!" in green text.
+   - The success message must be clearly visible and near the form.
+
+5. Cart Summary
+   - The cart summary table must show item name, unit price, quantity, and subtotal.
+   - The total price must be clearly labeled and bold.
+

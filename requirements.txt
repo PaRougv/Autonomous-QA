@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic
+requests
+streamlit
+sentence-transformers
+numpy
+beautifulsoup4
+lxml
+openai==0.28.0
+selenium
+webdriver-manager
+python-multipart
