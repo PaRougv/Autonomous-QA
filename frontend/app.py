@@ -1,12 +1,16 @@
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import os
 import json
 import requests
 import streamlit as st
-
 from typing import List
-from backend.server import start_backend_server
 
+# Start FastAPI backend inside Streamlit
+from backend.server import start_backend_server
 start_backend_server()
+
 # -------------------------- CONFIG & STYLES -------------------------- #
 
 DEFAULT_BACKEND_URL = "http://localhost:8000"
@@ -16,6 +20,7 @@ st.set_page_config(
     page_icon="🧪",
     layout="wide",
 )
+
 
 # ---- Custom CSS to make things not look like default Streamlit ---- #
 st.markdown(
