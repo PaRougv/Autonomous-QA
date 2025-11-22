@@ -6,6 +6,13 @@ An AI-powered **autonomous QA assistant** that understands your project document
 
 ---
 
+## 🎥 Demo Video (Project Explanation)
+
+[![Watch the video](https://img.youtube.com/vi/jNXwsuptiVs/maxresdefault.jpg)](https://www.youtube.com/watch?v=jNXwsuptiVs)
+
+
+---
+
 ## 🚀 Features
 
 - 📥 Upload documentation + HTML (checkout page)

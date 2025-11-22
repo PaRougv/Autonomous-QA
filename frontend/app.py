@@ -7,11 +7,9 @@ import requests
 import streamlit as st
 from typing import List
 
-# Start FastAPI backend inside Streamlit
 from backend.server import start_backend_server
 start_backend_server()
 
-# -------------------------- CONFIG & STYLES -------------------------- #
 
 DEFAULT_BACKEND_URL = "http://localhost:8000"
 
@@ -22,7 +20,6 @@ st.set_page_config(
 )
 
 
-# ---- Custom CSS to make things not look like default Streamlit ---- #
 st.markdown(
     """
     <style>
@@ -148,7 +145,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# -------------------------- SIDEBAR -------------------------- #
 
 st.sidebar.title("⚙️ Settings")
 
@@ -172,7 +168,6 @@ st.sidebar.markdown(
 st.sidebar.markdown("---")
 st.sidebar.caption("Tip: keep this page + your backend terminal visible while recording your demo.")
 
-# -------------------------- HERO SECTION -------------------------- #
 
 st.markdown(
     """
@@ -197,7 +192,7 @@ st.markdown(
 
 st.markdown("")
 
-# -------------------------- SESSION STATE -------------------------- #
+
 
 if "test_cases" not in st.session_state:
     st.session_state.test_cases: List[dict] = []
@@ -208,13 +203,13 @@ if "raw_test_case_output" not in st.session_state:
 if "kb_status" not in st.session_state:
     st.session_state.kb_status = "idle"  # idle | built | error
 
-# -------------------------- LAYOUT: TABS -------------------------- #
+
 
 tab1, tab2, tab3 = st.tabs(
     ["1. Build Knowledge Base", "2. Generate Test Cases", "3. Generate Selenium Scripts"]
 )
 
-# -------------------------- TAB 1: BUILD KB -------------------------- #
+
 
 with tab1:
     st.markdown(
@@ -344,7 +339,6 @@ with tab1:
                     st.session_state.kb_status = "error"
 
 
-# -------------------------- TAB 2: GENERATE TEST CASES -------------------------- #
 
 with tab2:
     st.markdown(
@@ -455,7 +449,7 @@ with tab2:
         st.info("Once structured test cases are generated, they will appear here for selection.")
 
 
-# -------------------------- TAB 3: GENERATE SELENIUM SCRIPTS -------------------------- #
+
 
 with tab3:
     st.markdown(
